@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, MessageSquarePlus, WifiOff, AlertTriangle } from 'lucide-react';
 
-type PairingStatus = 'idle' | 'waiting' | 'error_no_partner' | 'error_firebase' | 'connecting';
+export type PairingStatus = 'idle' | 'waiting' | 'error_no_partner' | 'error_firebase' | 'connecting';
 
 interface PairingControlsProps {
   status: PairingStatus;
