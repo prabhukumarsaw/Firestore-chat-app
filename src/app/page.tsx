@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useUser } from '@/hooks/useUser';
-import { PairingControls } from '@/components/PairingControls';
+import { PairingControls, type PairingStatus } from '@/components/PairingControls';
 import { ChatInterface } from '@/components/ChatInterface';
 import * as chatService from '@/services/chatService';
 import type { User as UserType, Message as MessageType, Chat as ChatType } from '@/types/blabberbox';
@@ -283,7 +283,7 @@ export default function HomePage() {
 
   return (
     <main>
-      <PairingControls status={chatState} onFindChat={handleFindChat} />
+      <PairingControls status={chatState as PairingStatus} onFindChat={handleFindChat} />
     </main>
   );
 }
